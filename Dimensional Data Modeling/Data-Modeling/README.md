@@ -62,7 +62,7 @@ This repository demonstrates various approaches to dimensional data modeling usi
    **Key Features:**  
    - Custom types (`season_stat`, `scoring_classes`).
    - Full outer join to merge current season data with existing records.
-   - Categorizes players (e.g., "star," "good") based on their points per game.
+   - Categorizes players (e.g., "star," "good", "average",  or "bad") based on their points per game.
 
    **Steps to Execute:**  
    - Create custom types and the `player_table` schema.
