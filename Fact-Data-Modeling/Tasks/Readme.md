@@ -29,4 +29,3 @@ Construct the following eight queries:
 - An incremental query that loads `host_activity_reduced`
   - day-by-day
 
-Please add these queries into a folder, zip them up and submit [here](https://bootcamp.techcreator.io)
