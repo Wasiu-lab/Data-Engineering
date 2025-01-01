@@ -126,3 +126,17 @@ Dimensional data modeling is a cornerstone of data analytics, providing a struct
    **How to Use:**  
    - Execute the script to create a fact table schema.
    - Populate it with metrics and connect it to related dimension tables.
+   - 
+### 5. **Dimensional Analysis**
+ **File:** `dimensional analysis on 3 days.sql`
+  **Purpose:**  
+   - Focuses on analyzing metrics over three days.
+   - Highlights changes in facts and dimensions across time.
+     
+  **Key Features:** 
+   - Calculates retention, engagement, and change rates.
+   - Combines fact and dimension modeling for advanced temporal insights.
+     
+**How to Use:** 
+   - Run the script to analyze three consecutive days of activity.
+   - Use for retention analysis, trend tracking, and daily performance reports.
