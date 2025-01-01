@@ -216,3 +216,63 @@ FROM user_growth;
 - Assess how well the platform attracts new users.
 - Monitor ongoing user engagement levels.
 - Recognize churn trends and opportunities for user reactivation.
+
+---
+## 4.Grouping_Set.sql
+
+### Purpose:
+
+* Creates a dashboard to analyze device hits using grouping sets.
+
+* Enriches event data by joining with device details to provide dimensions such as operating system, device type, and browser type.
+
+### Key Features:
+
+* Uses COALESCE to handle null values and display appropriate defaults (e.g., "unknown").
+
+* Implements grouping sets to generate aggregates at different levels of granularity.
+
+* Ensures a comprehensive overview of event activity across multiple device dimensions.
+
+### Example Output:
+
+* Total events grouped by os_type, device_type, and browser_type.
+
+* Overall event statistics when no specific grouping is applied.
+
+###Usage:
+
+* Useful for generating dashboards and reports that require multi-level aggregation.
+
+---
+
+## 5. Retention analysis.sql
+
+### Purpose:
+
+* Analyzes user retention patterns over time.
+
+### Key Metrics:
+
+* Percentage of active users (pct_active): Ratio of active users (retained, resurrected, or new) to total users.
+
+* Retained Users: Users who remain active since their first activity.
+
+* Resurrected Users: Previously inactive users who became active again.
+
+* New Users: Users who are active for the first time.
+
+### Key Features:
+
+* Calculates day_since_first_active to track user activity over time.
+
+* Extracts the day of the week (dow) for activity patterns.
+
+* Segments user activity states for detailed insights.
+  
+### Example Usage:
+
+* Helps identify trends in user engagement and churn.
+
+* Supports cohort analysis to evaluate the success of user acquisition and re-engagement strategies.
+
