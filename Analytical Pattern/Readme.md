@@ -144,3 +144,75 @@ Expands arrays or nested structures into rows for analysis.
 ```sql
 SELECT user_id, unnest(interests) AS interest
 FROM user_data;
+```
+
+## 1. DDL User Account Growth.sql
+This script demonstrates the use of DDL (Data Definition Language) to create a structure for analyzing user account growth. It highlights techniques for tracking new user signups, churn, and net growth over time. Key features include:
+
+Creating a schema to store user activity data.
+Populating tables with synthetic or real-world data for growth tracking.
+Enabling structured analysis to identify growth trends.
+
+---
+
+## 2. Funnel Analysis
+
+**Objective:** Analyze user progression through stages (e.g., registration to purchase), identify drop-offs, and improve conversion rates.
+
+### Key Points
+- Tracks user counts at each stage.
+- Highlights drop-off points.
+- Calculates conversion rates for each stage.
+
+### Example Query
+```sql
+SELECT
+    stage,
+    COUNT(DISTINCT user_id) AS user_count,
+    COUNT(DISTINCT user_id) * 100.0 / MAX(COUNT(DISTINCT user_id)) OVER () AS conversion_rate
+FROM (
+    SELECT
+        user_id,
+        event,
+        CASE
+            WHEN event = 'register' THEN 'Stage 1'
+            WHEN event = 'add_to_cart' THEN 'Stage 2'
+            WHEN event = 'purchase' THEN 'Stage 3'
+        END AS stage
+    FROM user_activity
+) stage_data
+GROUP BY stage
+ORDER BY stage;
+```
+
+**Insights:**
+- Pinpoint where users drop off in the funnel.
+- Quantify stage-to-stage conversion rates.
+- Target stages with high drop-off rates for optimization.
+
+---
+
+## 3.Growth Accounting
+
+**Objective:** Categorize user growth into **New**, **Retained**, and **Churned** to evaluate business performance.
+
+### Key Points
+- Identifies new users during a specific period.
+- Tracks retention and re-engagement.
+- Detects churned users to inform intervention strategies.
+
+### Example Query
+```sql
+SELECT
+    user_id,
+    CASE
+        WHEN first_activity_date BETWEEN '2024-01-01' AND '2024-01-31' THEN 'New'
+        WHEN last_activity_date BETWEEN '2024-01-01' AND '2024-01-31' THEN 'Retained'
+        ELSE 'Churned'
+    END AS user_status
+FROM user_growth;
+```
+**Insights:**
+- Assess how well the platform attracts new users.
+- Monitor ongoing user engagement levels.
+- Recognize churn trends and opportunities for user reactivation.
