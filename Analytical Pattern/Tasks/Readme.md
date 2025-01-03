@@ -22,5 +22,3 @@ The homework this week will be using the `players`, `players_scd`, and `player_s
   - What is the most games a team has won in a 90 game stretch? 
   - How many games in a row did LeBron James score over 10 points a game?
 
-
-Please add these queries into a folder `homework/<discord-username>`
