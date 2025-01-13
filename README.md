@@ -54,20 +54,3 @@ This repository demonstrates my proficiency in a range of tools and technologies
 
 * ETL/ELT: Building and maintaining ETL pipelines.
 
-
-# How to Use
-
-1. Clone the repository:
-   git clone https://github.com/Wasiu lab/Data-Engineering.git
-
-
-3. Navigate to a project folder to explore its specific implementation.
-
-
-4. Follow the documentation in the respective folder for setup and usage instructions.
-
-
-
-# About Me
-
-I am Abdulwasiu Adegboye, a passionate learner and aspiring Cloud and Data Engineer. With a background in Marine Engineering and extensive experience in supply chain management, I am building a career in cloud-based data solutions. You can explore my work on GitHub or connect with me on LinkedIn.
